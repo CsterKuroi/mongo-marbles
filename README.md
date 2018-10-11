@@ -10,9 +10,11 @@ docker load -i peer.tar
 docker load -i orderer.tar
 ```
 
-4. cd basic-network
-
-5. ./start.sh
+4. start network
+```
+cd basic-network
+./start.sh
+```
 
 6. docker exec -it cli bash
 
