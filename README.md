@@ -32,7 +32,7 @@ peer chaincode instantiate -o orderer.example.com:7050 -C mychannel -n marbles03
 
 // three marbles
 peer chaincode invoke -o orderer.example.com:7050   -C mychannel  -n marbles03 -c '{"Args":["initMarble","marble1","blue","35","tom"]}'
-peer chaincode invoke -o orderer.example.com:7050   -C mychannel  -n marbles03  -c '{"Args":["initMarble","marble2","red","50","tom"]}'
+peer chaincode invoke -o orderer.example.com:7050   -C mychannel  -n marbles03 -c '{"Args":["initMarble","marble2","red","50","tom"]}'
 peer chaincode invoke -o orderer.example.com:7050   -C mychannel  -n marbles03 -c '{"Args":["initMarble","marble3","blue","70","tom"]}'
 
 // GetState()
