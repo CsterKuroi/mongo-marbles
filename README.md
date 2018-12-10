@@ -77,3 +77,10 @@ db.getCollection('test').find({"value.owner":"jerry"}).explain()
 ```
 
 *Tips:* https://robomongo.org/download
+
+```
+peer chaincode install -n mycc -v 1.0 -p github.com/chaincode_example02/go
+peer chaincode instantiate -o orderer.example.com:7050 -C mychannel -n mycc -v 1.0 -c '{"Args":["init","a","200","b","100"]}'
+peer chaincode query -o orderer.example.com:7050   -C mychannel  -n mycc -c '{"Args":["query","a"]}'
+peer chaincode invoke -o orderer.example.com:7050   -C mychannel  -n mycc -c '{"Args":["invoke","a","b","11"]}'
+```
